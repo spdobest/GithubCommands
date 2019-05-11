@@ -94,14 +94,135 @@ now git hist will do the same task as above
 sometime we need to ignore some file not to track by the git  
 Create a file .gitignore in root directory
 
+### MVirtual Merge or Diff toll installation ###
+U can use p4Merge visual merge tool and the setup are below  
+Download P4merge tool from internet  
+https://www.perforce.com/products/helix-core-apps/merge-diff-tool-p4merge
 
-```
-pwd (To print the current directory path in command line) 
+Download and install into your system  
+**P4merge Configure to any command prompt(Windows)**  
+open git bash  
+type p4merge in bitbash -- you will get error  
+Lunch p4Merge application in your system  
+open p4Merge in the program file  
+copy the path and set the ENvironment variable as above path    
+set path = the path of p4merge  
+P4merge Configure to any command prompt(MAC)  
+go to the installation path of p4merge in mac
+open  git bash , using config set the diff tool as below  
+**git config --global merge.tool p4merge**  
 
-git init (This will create a .git folder in root directory of your project)  
+**git config --global mergetool.p4merge.path "installation path/p4merge.exe"  
+  
+### Comparison  ###  
+Sometime we need to compare the changes in a file between the commits and between branches and also local to remote.  
+In this we can use **git diff** command   
+**git diff HEAD** --Difference between the working directory to the last commit  
+**git difftool diff HEAD** -- it will show a graphical window to show diference  
+**git diff --staged HEAD** -- Comparison between staging and Repository HEAD  
+**dit difftool --staged HEAD**-- Graphical presentation of above command  
+Comparison of a current file with its last commit  
+**git diff --fileName** -- it will compare a files changes  
+**git difftoll --fileName** -- Graphical presentation of above commnad  
 
-```
+### Comparison Between 2 commits ##  
+**git log --online**  show history with message  
+**git diff COMMITID HEAD** -- It will show all the difference to the last commit with the commit ID  
+**git diff HEAD HEAD^** -- Comparison between last commit and its previous commit  
+**git diff COMMITID1 COMMITID2** -- difference between 2 commits  
+**git difftoll  COMMITID1 COMMITID2** -- Graphical presentation of above command  
+  
+### Branching and Merging ###  
+  
+**git branch -a** -- it will list both local and remote branches 
+**git branch** -- It will show the current branch  
+**git branch NEW_BRANCHNAME -a** -- it will create  a local branch  
+**git checkout BRANCHNAME** -- Switch to new branch name  
+**git log --online --decorate** -- Details of all commits in al the branches  
+**git branch -m Branchname1 branchname2** -- it will rename the branch  
+**git branch -d bRANCH_NAME**  --  It will delete the branch  
+**git checkout -b branchName** -- It will create a new branch and switch to that branch  
+**Merging**  
+Before commit , always check the difference between the 2 branches  
+**git diff master newBranch**  
+**git merge SOURCEBRANCH**  -- Merge the source branch to the current branch  
+**git commit -am "Message"** -- One line message  
+### Rebase ###  
+
+
+### STASH ###  
+
+
+### TAG ###  
+
+  
+ ## SOME OTHER USEFUL COMMANDS ##  
  
+To setup First time url  
+git init  
+git remote add origin https://github.com/xxx/yyy.git  
+git add .  
+git commit -m "first commit"  
+git push -u origin master  
+To see the existing URL just do:  
+git config remote.origin.url  
+  
+TO see the Existing URL   
+git config remote.origin.url  
+To change the remote url  
+git config remote.origin.url https:github/newgithublink  
+Remove Remote Url  
+git remote rm  
+git remote add    
+git remote set-url    
+git remote help  
+  
+git add .   
+git commit -m”commit message”  
+git push origin master branchName  
+git branch  
+git checkout new_branch_name  
+  
+Git config --system --unset credential.helper  
+git log  
+git diff  
+git ignore  
+  
+refusing to merge unrelated histories  
+git pull origin branchName --allow-unrelated-histories  
+  
+git branch  
+git remote  
+git branch  
+to set up user  
+$git config --global user.name [your username]  
+$git config --global user.email [your email]   
+
+  
+git config remote.origin.url https://github.com/spdobest/CleanArchitecture.git  
+  
+To setup First time url  
+git init  
+git remote add origin https://github.com/xxx/yyy.git  
+git add .  
+git commit -m "first commit"  
+git push -u origin master  
+To see the existing URL just do:  
+git config remote.origin.url  
+
+TO see the Existing URL   
+git config remote.origin.url  
+To change the remote url  
+git config remote.origin.url https:github/newgithublink  
+Remove Remote Url  
+git remote rm  
+git remote add  
+git remote set-url  
+git remote help  
+  
+Github writing tricks  
+ https://help.github.com/articles/basic-writing-and-formatting-syntax
+
  
  
  
