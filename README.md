@@ -35,19 +35,70 @@ https://git-scm.com/downloads
 After successfull installation, Open git bash commandline  
 TO check version of your git installed in system  
 
-git --version 
-
+ 
 To add git to any project , just initialize git inside the project folder  
 redirect to The project  
-Before move to commands details, lets see the folder structure of git internally 
 
-Some basic Git commands are:
+Before move to commands details, lets see the folder structure of git internally  
+![alt tag](https://github.com/spdobest/GithubDemo/blob/master/git_structure.png)  
+
+## Some basic Git commands are:## 
+
+**git --version** To print the installed git version  
+**git init** It will initialize git and create .git filder in root directory  
+### First setup the user in command line for the repository ###  
+**git config --global user.name USER_NAME** it will set user name  
+**git config --global user.email USER_EMAIL**  
+**git config --global --list**  --(To check the user list for the repository in your system )  
+Clone the Project now    
+**git clone "ENter project repository which ends with .git"**  
+
+**git status** --(It will print the branch name and all the new and edited files which not added)  
+**git add filename** --(It will add the particular file)    
+**git add .** --(It will add all the newly added and edited files to .git folder)  
+**git commit**** --(It will open an edotor to enter commit message with multiline)  
+**git commit -m "Your Commit Message"**  --(It will commit directly without opening an;y new window)  
+**git push origin branchname** --It will push the code to the repository in web to the branch name  
+**ls al** --it will print all the files including . files in console  
+**git ls-files** --it will print the files in the git  
+  
+Now create multilevel folder like this level1/level2/leve3  
+**mkdir -p level1/level2/level3**  
+create a file in level1  
+**git add filename**(This file is added to staging now) 
+**Now you want to remove the file**  
+**git reset HEAD filename** it will remove that file from from staging  
+**Now you have changed something in a file and committed the code, but you want the code from the last commit**  
+**git checkout --filename** -- it will put the file committed in the last commit  
+  
+### Renaming and Moving Folder ###  
+**git mv filename1.txt filenameNew.txt** --it will change the file name to filenameNew
+**git mv filenameNew.txt filename1.txt** --Now you want to revert back the changes   
+### Deleting file ###  
+**git rm filename** -- it will delete the file, now git will not track the file  
+after deleting when you check the status, it will show **deleting FIle**  
+once you commit , it will not track the file 
+**git reset HEAD filename** --if you want to put the file back to staging and want to track 
+**git add -A** -- if you deleted a file manually and did not commit, you can get the file back by the following command  
+**rm -rf folderName** --it will delete the folder  
+### Git Alias ###  
+when you dont to type a long git command, you can make alias (short name) for the command and store in git config file locally. It can only applicable inside the folder where you put the alias name  
+**git log --all --graph decorate --online** --it will show the log with more details  
+Now you dont want to type this command everytime  
+**git config --global alias.hist "YOur command"** --now instead of long command you can use git hist  
+**Example**  
+git config --global alias.hist "git log --all --graph decorate --online"
+now git hist will do the same task as above  
+**YOu can see where the command stored, open ~/.gitconfig, you can see the command**  
+### Git Ignore ###  
+sometime we need to ignore some file not to track by the git  
+Create a file .gitignore in root directory
+
+
 ```
-git init 
-git status
-git add   (It will add all the newly added files to .git folder)
-git commit (It will open an edotor to enter commit message with multiline)
-git commit -m "Your Commit Message"  (It will commit directly without opening an;y new window)
+pwd (To print the current directory path in command line) 
+
+git init (This will create a .git folder in root directory of your project)  
 
 ```
  
