@@ -220,6 +220,10 @@ git remote add
 git remote set-url  
 git remote help  
   
+**git squash**  
+**git reset**  
+
+  
 Github writing tricks  
  https://help.github.com/articles/basic-writing-and-formatting-syntax
 
