@@ -222,7 +222,9 @@ git remote help
   
 **git squash**  
 **git reset**  
-
+**git push --set-upstream origin master**  
+**git show-branch** - It will show the diffference between the branches  
+**
   
 Github writing tricks  
  https://help.github.com/articles/basic-writing-and-formatting-syntax
