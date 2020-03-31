@@ -227,7 +227,19 @@ git remote help
 **
   
 Github writing tricks  
- https://help.github.com/articles/basic-writing-and-formatting-syntax
+ https://help.github.com/articles/basic-writing-and-formatting-syntax  
+   
+**DELETE**.  
+- How to Delete Local Branch
+git branch -d test
+- How To delete Remote Branch
+git branch -a
+# *master
+#  test
+#  remote/origin/master
+#  remote/origin/test
+
+git push origin --delete test
 
  
  
