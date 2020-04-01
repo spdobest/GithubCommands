@@ -139,7 +139,8 @@ Comparison of a current file with its last commit
 **git branch NEW_BRANCHNAME -a** -- it will create  a local branch  
 **git checkout BRANCHNAME** -- Switch to new branch name  
 **git log --online --decorate** -- Details of all commits in al the branches  
-**git branch -m Branchname1 branchname2** -- it will rename the branch  
+**git branch -m Branchname1 branchname2** -- it will 
+the branch  
 **git branch -d bRANCH_NAME**  --  It will delete the branch  
 **git checkout -b branchName** -- It will create a new branch and switch to that branch  
 **Merging**  
@@ -229,17 +230,32 @@ git remote help
 Github writing tricks  
  https://help.github.com/articles/basic-writing-and-formatting-syntax  
    
-**DELETE**.  
+## DELETE.  
 - How to Delete Local Branch
 git branch -d test
 - How To delete Remote Branch
-git branch -a
-# *master
-#  test
-#  remote/origin/master
-#  remote/origin/test
+git branch -a 
+git push origin --delete test. 
+**2.Delete the old-name remote branch and push the new-name local branch.**    
+```
+git push origin :old-name new-name
+```
+**3.Reset the upstream branch for the new-name local branch.**  
+Switch to the branch and then:   
+```
+git push origin -u new-name
+```
+## RENAME BRANCH
+**1. Rename your local branch.**.   
+If you are on the branch you want to rename:  
+```
+  git branch -m new-name
+```    
+If you are on a different branch:  
+```
+git branch -m old-name new-name
+```  
 
-git push origin --delete test
 
  
  
