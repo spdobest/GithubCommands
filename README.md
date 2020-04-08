@@ -257,6 +257,167 @@ git branch -m old-name new-name
 ```  
 
 
+Merge preserves history whereas rebase rewrites it.  
+  
+git checkout -b branchName  
+  
+git add .   
+git commit -m”commit message”  
+git push origin master branchName  
+git branch  
+git checkout new_branch_name  
+  
+How to download specific repositiry which have access to your used ID  
+git clone https://<USERNAME>:<PASSWORD>@github.com/path/to/repo.git  
+Set the url in github  
+git remote set-url origin https://<USERNAME>:<PASSWORD>@github.com/path/to/repo.git  
+  
+https://www.shellhacks.com/git-config-username-password-store-credentials/  
+  
+git config --global --edit  
+  
+Set a Git username:  
+$ git config --global user.name "Mona Lisa"  
+  
+To see the git details (user name details)  
+git config --list --global  
+  
+To see the details of the repository  
+git remote show origin  
+  
+To remove the last commit from git, you can simply run  
+git reset --hard HEAD^  
+If you are removing multiple commits from the top, you can run   
+git reset --hard HEAD~2   
+to remove the last two commits  
+  
+Now if we want to just undo commit without any other changes, we can use  
+git reset --soft HEAD^  
+  
+git reset HEAD@{1}  
+  
+Git config --system --unset credential.helper  
+git log  
+git diff  
+git ignore  
+  
+refusing to merge unrelated histories  
+git pull origin branchName --allow-unrelated-histories  
+  
+git branch  
+git remote  
+git branch  
+to set up user  
+$git config --global user.name [your username]  
+$git config --global user.email [your email]  
+  
+git config remote.origin.url https://github.com/spdobest/CleanArchitecture.git  
+  
+To setup First time url  
+git init  
+git remote add origin https://github.com/xxx/yyy.git  
+git add .  
+git commit -m "first commit"  
+git push -u origin master  
+To see the existing URL just do:  
+git config remote.origin.url  
+  
+TO see the Existing URL   
+git config remote.origin.url  
+To change the remote url  
+git config remote.origin.url https:github/newgithublink  
+Remove Remote Url  
+git remote rm  
+git remote add  
+git remote set-url  
+git remote help  
+  
+Git sa github_url  
+Git pull origin mastegit push origin master  
+  
+Github writing tricks  
+ https://help.github.com/articles/basic-writing-and-formatting-syntax  
+  
+for example, git c server as all the operation based on server  
+Decentralized : All operations are local and there is no centralized server for this  
+  
+GIT : Distributed versin control system , not require to make it centralized  
+  
+Key COncept  
+Repository contains all files, history, config managed by git  
+3 stages of git  
+Working Directory - it contains all code in local  
+Staging Area - Queueing up the changes for the next commit  
+Repository(.git folder) - This file contains all the history  
+  
+Remote - Master Branch  
+  
+git version - to know the version installed  
+
+Project set up  
+pwd - to print path of current directory u r in  
+  
+First set up the user in command line for the repository  
+git config  --global user.name USER_NAME l  
+git config  --global user.email USER_EMAIL  
+to check  
+git config --global --list    => it will print the list of users  
+Clone the project now  
+Copy the url  
+git clone GitHub_url  
+it will create .git directory in the path  
+git status => it will show the branch name and the files to commit  
+Create a file using command line in mac  
+echo "Quick underrating of git" >> start.txt  
+cat start.txt => to print the content  
+git add name_of_the_file  
+git commit -m "Message"  
+As of now the file is still in the local directory not in the Remote  
+git push origin master => it will push the code to repository  
+It will ask for username and password  
+   
+git version  
+git config --global user.name "Abe Lincoln"  
+git config --global user.email "mrabe@git.training"  
+git config --global --list  
+git clone github-https-url # paste in your GitHub HTTPS clone URL ls  
+cd github-demo  
+ls  
+git status  
+echo "Test Git Quick Start demo" >> start.txt  
+ls  
+cat start.txt  
+git status  
+git add start.txt  
+git status  
+git commit -m "Adding start text file"  
+git status  
+git push origin master  
+  
+Create project from fresh  
+Git init project_name  
+Cd project_name  
+ls  
+Ls -al  
+Git status  
+Git add file_name   ( to add the specific file)   
+Git add .  (To add the files)   
+Git commit ( it will open another editor to put ur messages)   
+Cmd + s  
+Cmd + w  
+Commit -m  "message"  
+  
+There few files we can ignore  
+For that,  just visit the site and select the. Files u want to ignore   
+Www.initializer.com  
+  
+Download the file  
+Unzip path/zipfile.zip  
+Mv oldname new name  
+  
+Set up in an existing project  
+Git init   
+
  
  
  
