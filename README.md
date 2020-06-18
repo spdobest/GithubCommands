@@ -42,7 +42,10 @@ redirect to The project
 Before move to commands details, lets see the folder structure of git internally  
 ![alt tag](https://github.com/spdobest/GithubDemo/blob/master/git_structure.png)  
 
-## Some basic Git commands are:## 
+# Some basic Git commands are:
+  
+# Git Merge
+
 
 **git --version** To print the installed git version  
 **git init** It will initialize git and create .git filder in root directory  
