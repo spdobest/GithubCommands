@@ -420,6 +420,9 @@ Mv oldname new name
   
 Set up in an existing project  
 Git init   
+## CherryPick
+git cherrypick commit_number ( It will pick the changes of the CommitNumber and add to the current branch) 
+
 
  
  
