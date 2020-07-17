@@ -421,7 +421,13 @@ Mv oldname new name
 Set up in an existing project  
 Git init   
 ## CherryPick
-git cherrypick commit_number ( It will pick the changes of the CommitNumber and add to the current branch) 
+- git cherrypick commit_number ( It will pick the changes of the CommitNumber and add to the current branch) 
+## Squash (To merge all older Commit messages into one message)
+- git rebase -i head~2   (that means you want to include the last 2 commits and combine them to one commit)
+- Once done, just replace pick with squash instead of the top commit
+- then save and
+- git push origin -f
+
 
 
  
