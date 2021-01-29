@@ -130,6 +130,11 @@ Before move to commands details, lets see the folder structure of git internally
 - Usage: git stash drop  
 - This command discards the most recently stashed changeset.
 
+## cherry pick
+- git cherry-pick is a useful tool but not always a best practice. 
+- Cherry picking can cause duplicate commits and many scenarios where cherry picking would work, traditional merges are preferred instead. With that said git cherry-pick is a handy tool for a few scenarios...
+- **git cherry-pick commitSha** it will pick the changes in the commit hash
+
 # Git Merge
 
 **git --version** To print the installed git version  
