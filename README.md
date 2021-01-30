@@ -135,7 +135,21 @@ Before move to commands details, lets see the folder structure of git internally
 - Cherry picking can cause duplicate commits and many scenarios where cherry picking would work, traditional merges are preferred instead. With that said git cherry-pick is a handy tool for a few scenarios...
 - **git cherry-pick commitSha** it will pick the changes in the commit hash
 
-# Git Merge
+## Remove locally commited file
+- Follow the below steps
+- git reset --soft HEAD^ 
+or
+- git reset --soft HEAD~1
+- git reset HEAD path/to/unwanted_file
+- git commit -c ORIG_HEAD 
+
+## Want to remove a locally commited file completely
+- remove the file 
+  - git rm <file>
+- commit with amend flag: 
+    - git commit --amend
+  
+##  Git Merge
 
 **git --version** To print the installed git version  
 **git init** It will initialize git and create .git filder in root directory  
@@ -225,8 +239,7 @@ Comparison of a current file with its last commit
 **git diff COMMITID1 COMMITID2** -- difference between 2 commits  
 **git difftoll  COMMITID1 COMMITID2** -- Graphical presentation of above command  
   
-### Branching and Merging ###  
-  
+## Branching and Merging
 **git branch -a** -- it will list both local and remote branches 
 **git branch** -- It will show the current branch  
 **git branch NEW_BRANCHNAME -a** -- it will create  a local branch  
