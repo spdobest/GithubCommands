@@ -42,6 +42,42 @@ redirect to The project
 Before move to commands details, lets see the folder structure of git internally  
 ![alt tag](https://github.com/spdobest/GithubDemo/blob/master/git_structure.png)  
 
+# GIT branching structure for development
+-> master
+  -> Feature Branch1
+      -> sub Feature1 branch1
+      -> sub Feature1 branch2
+ -> Feature Branch2
+      -> sub Feature2 branch1
+      -> sub Feature2 branch2  
+
+- Merge the sub branches to Feature Branch. Once all the sub feature branch merged to Feature branch and the feature branch developed completely, Merge the Feature Branch to master.
+- Once Feature Branch1 and Feature Branch2 completely merged with master and the integration testing is done.
+- If all the feature branches are merged and now ready to merge then create a Release Branch for release cut.
+- Once the Release is done, then merge the release branch to master again, so that master have all the minor changes done in Release branch
+
+## git Branch Commands
+- **git branch**	List branches (the asterisk denotes the current branch)
+- **git branch -a**	List all branches (local and remote)
+- **git branch [branch name]**	Create a new branch locally
+- **git branch -d [branch name]**	Delete a branch locally
+- **git branch --no-merged** you can find out which of your local branches have not been integrated into your current HEAD branch
+- **git branch -a -v** - You can list all branches (both local and remote), including the SHA-1 hashes and commit subjects that these branches currently point to:
+- **git branch** <new-branch> f71ac24d If you want to start your new branch based on a specific commit (not a branch), then you can provide the commit hash as the starting point**
+- **git branch <new-branch> v1.2**  You can also base your new branch on a specific tag you already have in your repository:
+- **git branch --track <new-branch> origin/<base-branch>** To take a remote branch as the basis for your new local branch, you can use the "--track" option:
+- **git checkout --track origin/<base-branch>** Alternatively, you can also use the "checkout" command to do this. If you want to name the local branch like the remote one, you only have to specify the remote branch's name:
+- **git push -u origin <local-branch>** - Create a new branch in remote repository
+## DELETE BRANCH
+- **git branch -d <BranchName>** -  Delete Local Branch
+- **git push origin --delete <BranchName>** How To delete Remote Branch
+- **git push origin :old-name new-name** Delete the old-name remote branch and push the new-name local branch.
+- **git push origin -u new-name** Reset the upstream branch for the new-name local branch
+## RENAME BRANCH
+- **git branch -m new-name** - Rename branch if you are on the same branch and want to rename the current branch   
+- **git branch -m old-name new-name** - Rename another branch apart from the current branch
+    
+  
 # Some basic Git commands are:
 
 ## git config
@@ -336,31 +372,6 @@ git remote help
 Github writing tricks  
  https://help.github.com/articles/basic-writing-and-formatting-syntax  
    
-## DELETE.  
-- How to Delete Local Branch
-git branch -d test
-- How To delete Remote Branch
-git branch -a 
-git push origin --delete test. 
-**2.Delete the old-name remote branch and push the new-name local branch.**    
-```
-git push origin :old-name new-name
-```
-**3.Reset the upstream branch for the new-name local branch.**  
-Switch to the branch and then:   
-```
-git push origin -u new-name
-```
-## RENAME BRANCH
-**1. Rename your local branch.**.   
-If you are on the branch you want to rename:  
-```
-  git branch -m new-name
-```    
-If you are on a different branch:  
-```
-git branch -m old-name new-name
-```  
 
 
 Merge preserves history whereas rebase rewrites it.  
