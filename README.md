@@ -104,13 +104,17 @@ Before move to commands details, lets see the folder structure of git internally
 - This command shows the differences between the files in the staging area and the latest version present.
 - Usage: git diff [first branch] [second branch]  
 - This command shows the differences between the two branches mentioned.
-## git reset
-- Usage: git reset [file]  
-- This command unstages the file, but it preserves the file contents.
-- Usage: git reset [commit]  
-- This command undoes all the commits after the specified commit and preserves the changes locally.
-- Usage: git reset –hard [commit]  
-- This command discards all history and goes back to the specified commit.
+## git reset (Reset Commits, files)
+- **git reset [file_name]** This command unstages the file, but it preserves the file contents.
+- **git reset [commit]** This command undoes all the commits after the specified commit and preserves the changes locally.
+- **git reset –hard [commit]** This command discards all history and goes back to the specified commit.
+- **git reset --soft HEAD~1** The last one commit will be removed from your Git history.
+- **git reset --soft HEAD~2** The last 2 commits will be removed from your Git history.
+- **git log --oneline --graph** show details log with graph
+- **git reset --hard HEAD~1** Same as SOFT, but it will not preserv the changes made. 
+- **git reset --mixed HEAD~1** In order to undo the last Git commit, keep changes in the working directory but NOT in the index, you have to use the “git reset” command with the “–mixed” option. Next to this command, simply append “HEAD~1” for the last commit.
+- **git revert HEAD** - In order to revert the last Git commit, use the “git revert” and specify the commit to be reverted which is “HEAD” for the last commit of your history.  
+-   
 ## git status
 - Usage: git status  
 - This command lists all the files that have to be committed.
