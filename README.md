@@ -77,24 +77,23 @@ Before move to commands details, lets see the folder structure of git internally
 - **git branch -m new-name** - Rename branch if you are on the same branch and want to rename the current branch   
 - **git branch -m old-name new-name** - Rename another branch apart from the current branch
 - ```
-  (on branch development)$ git merge master
-(resolve any merge conflicts if there are any)
-git checkout master
-git merge development (there won't be any conflicts now)
-```  
+      (on branch development)$ git merge master
+      (resolve any merge conflicts if there are any)
+      git checkout master
+      git merge development (there won't be any conflicts now)
+  ```  
 - If you want to keep track of who did the merge and when, you can use **--no-ff** flag while merging to do so.
 - **git merge --no-ff development**
   
 ## Git Merge
-  
-## Git Rebase
 - Merging is Git's way of putting a forked history back together again.
 - The git merge command lets you take the independent lines of development created by git branch and integrate them into a single branch.
 - Git merge will combine multiple sequences of commits into one unified history. In the most frequent use cases, git merge is used to combine two branches.
 - **How to merge code**
 - I generally like to merge master into the development first so that if there are any conflicts, I can resolve in the development branch itself and my master remains clean.
+  
+## Git Rebase  
 - Rebasing is a process to reapply commits on top of another base trip. It is used to apply a sequence of commits from distinct branches into a final commit. It is an alternative of git merge command. It is a linear process of merging.
-
 - **$git rebase <branch name>**
 - If There is any conflict, then check using **git status** then resolve the conflicts
 - **git status**
