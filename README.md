@@ -55,7 +55,22 @@ Before move to commands details, lets see the folder structure of git internally
 - Once Feature Branch1 and Feature Branch2 completely merged with master and the integration testing is done.
 - If all the feature branches are merged and now ready to merge then create a Release Branch for release cut.
 - Once the Release is done, then merge the release branch to master again, so that master have all the minor changes done in Release branch
-
+## Creating new Repository
+### create a new repository on the command line
+```
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/spdobest/asdasd.git
+git push -u origin main
+```
+### push an existing repository from the command line
+```
+git remote add origin gitRepositoryLink
+git branch -M main
+git push -u origin main
+```
 ## git Branch Commands
 - **git branch**	List branches (the asterisk denotes the current branch)
 - **git branch -a**	List all branches (local and remote)
