@@ -120,10 +120,12 @@ git push -u origin main
 - This command adds one or more to the staging area.
 - git add [file]
 - git add . (to add all the changed files)
+- [Click here for more](https://git-scm.com/docs/git-add)  
 ## git commit
 - Usage: git commit -m “[ Type in the commit message]” 
 - Usage: git commit -a  
 - This command commits any files you’ve added with the git add command and also commits any files you’ve changed since then.
+- [Click here for more commands](https://git-scm.com/docs/git-commit)
 ## git diff
 - Usage: git diff  
 - This command shows the file differences which are not yet staged.
