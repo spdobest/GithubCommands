@@ -96,6 +96,17 @@ git push -u origin main
 - Git merge will combine multiple sequences of commits into one unified history. In the most frequent use cases, git merge is used to combine two branches.
 - **How to merge code**
 - I generally like to merge master into the development first so that if there are any conflicts, I can resolve in the development branch itself and my master remains clean.
+- **Steps to merge branch**
+- Lets consider a branch feature merge to master
+- If you are on other branch then checkout to master first and update the code by git pull
+- git checkout master  
+- git pull  
+- git checkout feature
+- git pull
+- git merge master
+
+- One line to merge if feature and master branch have updated code.
+- git merge feature main    
   
 ## Git Rebase  
 - Rebasing is a process to reapply commits on top of another base trip. It is used to apply a sequence of commits from distinct branches into a final commit. It is an alternative of git merge command. It is a linear process of merging.
@@ -104,6 +115,18 @@ git push -u origin main
 - **git status**
 - **git rebase --continue** Once the conflict resolved then continue doing this
 - **git rebase --ski** If you want to skip, then you can ckip by using this command  
+
+>> Check Git merge vs Git rebase
+[Click here for more details](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)  
+  
+  
+## Git Squash
+- [Click Here for more](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) 
+
+## cherry pick
+- git cherry-pick is a useful tool but not always a best practice. 
+- Cherry picking can cause duplicate commits and many scenarios where cherry picking would work, traditional merges are preferred instead. With that said git cherry-pick is a handy tool for a few scenarios...
+- **git cherry-pick commitSha** it will pick the changes in the commit hash  
   
 # Some basic Git commands are:
 
@@ -198,11 +221,6 @@ git push -u origin main
 - This command lists all stashed changesets.
 - Usage: git stash drop  
 - This command discards the most recently stashed changeset.
-
-## cherry pick
-- git cherry-pick is a useful tool but not always a best practice. 
-- Cherry picking can cause duplicate commits and many scenarios where cherry picking would work, traditional merges are preferred instead. With that said git cherry-pick is a handy tool for a few scenarios...
-- **git cherry-pick commitSha** it will pick the changes in the commit hash
 
 ## Remove locally commited file
 - Follow the below steps
